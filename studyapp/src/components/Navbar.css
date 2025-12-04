@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  height: 70px;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  padding: 0 40px;
+  box-sizing: border-box;
+} 
+
+.container img {
+  width: 100px;      /* small logo size */
+  height: auto;     /* keeps image ratio */
+  cursor: pointer;
+  object-fit: contain;
+}
+
+
+.navtag .list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navtag .list li a {
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navtag .list li a:hover {
+  color: #38bdf8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .navtag .list {
+    gap: 15px;
+  }
+
+  .navtag .list li a {
+    font-size: 14px;
+  }
+}
+ 
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* moves buttons to right */
+  gap: 12px;
+  margin-left: auto;          /* pushes this div to right in navbar */
+}
+
+.Button button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Button button:hover {
+  background-color: #0ea5e9;
+  color: white;
+}

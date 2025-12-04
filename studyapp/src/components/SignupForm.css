@@ -1,0 +1,231 @@
+/* SignupForm.css */
+
+.signup-form-container {
+  width: 100%;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Account Type Buttons */
+.account-type-container {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.375rem;
+  background: #f7fafc;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.account-type-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #718096;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.account-type-btn:hover {
+  color: #4a5568;
+}
+
+.account-type-btn.active {
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Form Row for Name Fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.label-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.label-text sub {
+  color: #e53e3e;
+  font-size: 1rem;
+  margin-left: 0.125rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  color: #1a202c;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input::placeholder {
+  color: #a0aec0;
+  text-transform: capitalize;
+}
+
+/* Password Input Wrapper */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  padding-right: 3rem;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon:hover {
+  color: #4a5568;
+}
+
+/* Password Row */
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-transform: capitalize;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Animation for form elements */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-type-container {
+  animation: slideIn 0.4s ease forwards;
+}
+
+.form-row,
+.form-label {
+  animation: slideIn 0.4s ease forwards;
+}
+
+.form-row:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.form-label:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.password-row {
+  animation: slideIn 0.4s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.submit-button {
+  animation: slideIn 0.4s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .form-row,
+  .password-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .password-input {
+    padding-right: 2.75rem;
+  }
+
+  .eye-icon {
+    font-size: 1.25rem;
+    right: 0.875rem;
+  }
+
+  .submit-button {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .label-text {
+    font-size: 0.8125rem;
+  }
+
+  .account-type-btn {
+    font-size: 0.85rem;
+    padding: 0.625rem 0.75rem;
+  }
+}

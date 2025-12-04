@@ -1,0 +1,180 @@
+/* LoginForm.css */
+
+.login-form-container {
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.label-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0;
+}
+
+.label-text sub {
+  color: #e53e3e;
+  font-size: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  color: #1a202c;
+}
+
+.form-input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input::placeholder {
+  color: #a0aec0;
+}
+
+.password-input {
+  padding-right: 3rem;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon:hover {
+  color: #4a5568;
+}
+
+.forgot-password-link {
+  align-self: flex-end;
+  margin-top: -0.5rem;
+}
+
+.forgot-password-text {
+  font-size: 0.875rem;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-text:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Animation for form inputs */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-label {
+  animation: slideIn 0.4s ease forwards;
+}
+
+.form-label:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.form-label:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.submit-button {
+  animation: slideIn 0.4s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .form-input {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .password-input {
+    padding-right: 2.75rem;
+  }
+
+  .eye-icon {
+    font-size: 1.25rem;
+    right: 0.875rem;
+  }
+
+  .submit-button {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .label-text {
+    font-size: 0.8125rem;
+  }
+
+  .forgot-password-text {
+    font-size: 0.8125rem;
+  }
+}
