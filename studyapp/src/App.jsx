@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Iogin from './pages/Iogin.jsx'
 import Signup from './pages/Signup.jsx'
 import Dashborad from './pages/Dashborad'
+import ToDoApp  from './ToDoApp.jsx';
 
 function App() {
    
@@ -23,6 +24,7 @@ const [isLoggeding, setLoggedin] = useState(false);
              <Route path='/Iogin' element = {<Iogin setLoggedin ={setLoggedin}/>}/>
                <Route path='/signup' element = {<Signup setLoggedin = {setLoggedin}/>}/>
                <Route path='/Dashborad' element = {<Dashborad/>}/>
+               <Route path='/ToDoApp'    element    = {<ToDoApp/>}/>
       </Routes> 
    
       </div>

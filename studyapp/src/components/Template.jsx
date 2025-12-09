@@ -16,6 +16,7 @@ const Template = ({title, desc1, desc2, image, formType, setLoggedin}) => {
             <span>{desc2}</span>
           </p>
           
+          {/* in that we render form  */}
           <div className="form-container">
             {formType === "signup" ? (
               <SignupForm setLoggedin={setLoggedin}/>

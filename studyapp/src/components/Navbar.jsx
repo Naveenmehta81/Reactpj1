@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 
-import { Link  } from 'react-router-dom'
+import { Link  } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
  const Navbar = ( props) => {
@@ -22,6 +22,9 @@ import { toast } from 'react-toastify';
                 </li>
                 <li>
                     <Link to='/'>contact</Link>
+                </li>
+                <li>
+                    <Link to = '/ToDoApp'>ToDoApp</Link>
                 </li>
 
 
